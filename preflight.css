@@ -1,0 +1,37 @@
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+:where(&) {
+  block-size: 100%;
+  color-scheme: dark light;
+  color: CanvasText;
+  background: Canvas;
+  font: 100%/normal system-ui;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+
+  :where(*) {
+    font: inherit;
+    color: inherit;
+  }
+
+  :where(body) {
+    min-block-size: 100%;
+    display: grid;
+    gap: 1rlh;
+    padding-block: 4rlh;
+    padding-inline: 1rlh;
+    place-items: center;
+  }
+}
